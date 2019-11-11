@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048) -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="This site is for educational purpose">
+    <meta name="author" content="Bhanupriya">
+    <link rel="icon" href="">
+
+    <title>Js Binary</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/blog/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./Blog Template for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./Blog Template for Bootstrap_files/blog.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link active" href="index.html">Home</a>
+        <!--  <a class="nav-link" href="#">New features</a>
+          <a class="nav-link" href="#">Press</a>
+          <a class="nav-link" href="#">New hires</a>
+          <a class="nav-link" href="#">About</a> -->
+        </nav>
+      </div>
+    </div>
+
+    <div class="blog-header">
+      <div class="container">
+        <h1 class="blog-title">JS Binary</h1>
+        <p class="lead blog-description">A next generation platform</p>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-3 offset-sm-1 blog-sidebar">
+            <div class="sidebar-module sidebar-module-inset">
+              <h4 class="blog-post-title">My Posts</h4>
+              A glance of JavaScript
+              <div id="blogsidebar1">
+           
+              </div>
+              Configuration
+            <div id="blogsidebar2">
+              
+            </div>
+            </div>
+        </div>
+        <div class="col-sm-8 blog-main">
+            <div id="blogsContent">
+            Datatypes:<br/><br/>
+            <ul>
+                <li>Boolean</li>
+                <li>Null</li>
+                <li>Undefined</li>
+                <li>Number</li>
+                <li>String</li>
+                <li>Symbol</li>
+                <li>Object</li>
+            </ul>
+            <p>
+                In JS where data types can be compared by value are known as primitive, but where it can’t be compared with value called as non primitive. Only Object type  is non primitive, where value can accessed by key.
+                <br/>  
+                As Javascript is loosely typed, we don’t need to explicitly define variable type. It automatically process by assigned values.
+                    
+            </p>
+            <b>Boolean:</b> stores in Stack
+            <p>It checks for true or false, mostly for conditions. <br/>
+            <code>var checkFlag = true; <br/>
+            (checkFlag ) ?  console.log(‘checkFlag value is true’)  :  console.log(‘checkFlag value is false’);</code>
+            </p>
+            <b>NULL:</b>  stores in Stack
+            <p>
+                It is null value assigned to a variable. 
+                Difference between empty and Null : empty is a blank string, but typeof null can be object.
+                    
+            </p>
+            <b>Undefined:</b>   stores in Stack
+            <p>  stores in Stack
+                The typeof a declared variable without any assigned value known as Undefined.
+                Mostly while using array object values, it’s essential to put a condition whether array is not undefined. Or page load will break by error”trying to access abc key from undefined xyz array”.
+                    
+            </p>
+            <b> Number:</b>  stores in Stack
+            <p>
+            In JS a variable typeof number covers positive integer, negative number and flots/decimals.<br/>
+        <code>EX: var intVal = 5, negativeVal=-2, floatVal=2.3;<br/>
+                    &nbsp;alert(typeof intVal);<br/>
+                    &nbsp;alert(typeof negativeVal);<br/>
+                    &nbsp;alert(typeof floatVal);</code> 
+                    
+            </p>
+            <b>String:</b>  stores in Stack
+            <p>
+                In JS a variable typeof String can hold both characters as well as numbers. The values are assigned with in quotes.<br/>
+                Difference between string and number<br/>
+            <code>EX: var a=4, b=5; alert(a+b); //9<br/>
+                &nbsp;var c=’4’+’5’; alert(c+d);//45</code><br/>
+                But exception for <b>‘-’</b>, because of auto type casting it does the subtraction, irrespective of type(string or number)
+            </p>
+            <b>Symbol:</b>  stores in Stack
+            <p>
+            It is ES6 type, basically supported by advance browsers. It is not process in older browsers.A symbol is a unique and immutable data type and may be used as an identifier for object properties. The symbol object is an implicit object wrapper for the symbol primitive data type.
+            <br/><code>EX: let name = Symbol("name");
+            <br/>&nbsp;alert(name.toString());</code>
+            </p>
+            <b>Object: </b>stores in HEAP
+            <p>
+            It’s a collection of key value pair.<br/>
+            <code>EX: var myObject = {“key”:”value”};</code><br/>
+            There are several way to crete object in javascript.<br/><br/>
+                - Using Object.create() :<br/>
+                <code>var obj= Object.create(null);</code><br/>
+                Object prototype may only be an Object or null.<br/><br/>
+                -Using { }<br/>
+                <code>
+                    var data =<br/>
+                    &nbsp;{<br/>
+                        &nbsp;&nbsp; key1:value1,<br/>
+                        &nbsp;&nbsp; key2:value2<br/>
+                    &nbsp;}
+                </code><br/><br/>
+                -Using a function constructor<br/>
+                <code>
+                    var Obj = function(name) {<br/>
+                  &nbsp;&nbsp;this.name = name<br/>
+                &nbsp;}<br/>
+                var c = new Obj("hello");
+            </code>
+            </p>
+          </div><!-- /.blog-post -->
+  
+           
+  
+          </div>
+        
+</div>
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+    <p>By Bhanupriya</p>
+    <p>
+        <a href="#">Back to top</a>
+    </p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Blog Template for Bootstrap_files/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./Blog Template for Bootstrap_files/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="./Blog Template for Bootstrap_files/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Blog Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="data.json"></script>
+    <script type="text/javascript"  src="jb.js"></script>
+    <script type="text/javascript"  src="sidebar.js"></script>
+
+</body></html>

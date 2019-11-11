@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048) -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="This site is for educational purpose">
+    <meta name="author" content="Bhanupriya">
+    <link rel="icon" href="">
+
+    <title>Js Binary</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/blog/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./Blog Template for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./Blog Template for Bootstrap_files/blog.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link active" href="index.html">Home</a>
+        <!--  <a class="nav-link" href="#">New features</a>
+          <a class="nav-link" href="#">Press</a>
+          <a class="nav-link" href="#">New hires</a>
+          <a class="nav-link" href="#">About</a> -->
+        </nav>
+      </div>
+    </div>
+
+    <div class="blog-header">
+      <div class="container">
+        <h1 class="blog-title">JS Binary</h1>
+        <p class="lead blog-description">A next generation platform</p>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-3 offset-sm-1 blog-sidebar">
+            <div class="sidebar-module sidebar-module-inset">
+              <h4 class="blog-post-title">My Posts</h4>
+              A glance of JavaScript
+              <div id="blogsidebar1">
+           
+              </div>
+              Configuration
+            <div id="blogsidebar2">
+              
+            </div>
+            </div>
+        </div>
+        <div class="col-sm-8 blog-main">
+            <div id="blogsContent">
+            Array:<br/><br/>
+            <p>An array contains set of item individually or as key value pair with respect to specific index.</p>
+            <p>
+                EX: 
+            <ol>
+                <li>
+                    Empty array declaration in JavaScript <br/>
+                    <code>
+                        var empArr = [];
+                    </code>
+                </li>
+                <li>
+                    Array of numbers <br/>
+                    <code>var numArr=[1,4,3,2,5];</code>
+                </li>
+                <li>Array of strings<br/>
+                <code>
+                    var strArr = ['val1','val2','val3'];
+                </code>
+                </li>
+                <li>
+                    Assoviative array/ Array with key value pair<br/>
+                    <code>
+                        var samArr = ['key':'val','key1':'val1'];
+                    </code>
+                </li>
+            </ol>
+            </p>
+            <p>
+                Most used array manipulation methods:
+                <ul>
+                    <li>
+                        array.length : to identify the lenght of an array.<br/>
+                        <code>
+                            var arr = [3,45,4,2,3,4];
+                            console.log(arr.length); //output:6
+                        </code>
+                    </li>
+                    <li>
+                        Math.max to find the maximum value of an array item.<br/>
+                        <code>
+                            var arr = [3,45,4,2,3,4];
+                            console.log(Math.max(...arr)); //output:45
+                        </code>
+                    </li>
+                    <li>
+                        Math.min to find the minimum value of an array item.<br/>
+                        <code>
+                            var arr = [3,45,4,2,3,4];
+                            console.log(Math.min(...arr)); //output:2
+                        </code> <br/>
+                        We have used (...) spread opeator to iterator over each element in the array other wise it will return Nan(not a number)
+                    </li>
+                    <li>
+                        To add an item in the array push(),unshift(),splice(),concat(),(...) <br/>
+                        <code>
+                            var ar = [2,1,3];<br/>
+                            <ul>
+                                <li>ar.push(66); //ar become [2,1,3,66] - added item @end of the array to ar.length position</li>
+                                <li>ar.unshift(4); // ar become [4,2,1,3,66] - added item @ front of the array to 0 index</li>
+                                <li>ar.splice(2,0,5,6); //ar: [4,2,5,6,1,3,66] - added 2items in the index 2 as 5,6<br/>
+                                    2-index of array<br/>
+                                    0-number of element to remove<br>
+                                    5,6- item to inject<br/>
+                                </li>
+                                <li>
+                                    var b = [41,63,28];<br/>
+                                    ar.concat(b);//[4,2,5,6,1,3,66,41,63,28] - added an array at the end of the array
+                                </li>
+                                <li>
+                                    var x=[1,3,5],y=[2,4]; <br/>
+                                    x.splice(2,0,...b); //[1,3,2,4,5] can add array into the middle of an array
+                                </li>
+                            </ul>
+                        </code>
+                    </li>
+                    <li>
+                        Various way we can remove items from an array:
+                        <code>
+                            <ul>
+                                <li>
+                                    var a = [1,2,3];<br/>
+                                    a.pop();//[1,2] - removes item from the end of an array 
+                                </li>
+                                <li>
+                                    a.shift(); // [2]- remove item from index 0
+                                </li>
+                                <li>
+                                    var ar = [1,3,5,8,9,6];<br/>
+                                    ar.splice(2,2); //[1,3,9,6]  -remove 2 elements(5,8) from  index 2
+                                </li>
+                                <li>
+                                    var res -  ar.filter((x,index,ar)=>{  <br/>
+                                        return x>1; <br/>
+                                    });//res=[3,9,6]
+                                </li>
+                                <li>
+                                    delete res[2]; // [3,9,Empty] delete will delete the value on specified position but the space will be remain there
+                                </li>
+                            </ul>
+                        </code>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                Map, reduce, filter and find are 3 major array manipulation function in ECMA6. <br/>
+                The intend solution or apply changes to an array can be done by iteration, why we need this. When we do any itearation in js it enters into an event looping state. But these inbuilt methods given by browser processing unit, handles it differently.
+                <br/>
+                <b>Map:</b> Performs an action over each item of an array.<br/>
+                <code>
+                    var ab = [1,2,3,4,5];<br/>
+                    &nbsp;var res = ab.map(x=>2*x);//[2,4,6,8,10]
+                </code><br/>
+                <b>Reduce:</b> Operation on an array items to get single output. <br/>
+                <code>
+                    Ex: var a = [3,2,4];<br/>
+                    &nbsp;var res = a.reduce((x,y)=>x+y); //9
+                </code><br/>
+                <b>Filter:</b> It's an operation on array to get result on specific condiction .<br/>
+                <code>
+                    var a = [3,2,4,6,8]; <br/>
+                    &nbsp;var res = a.filter((x)=>x>2); //[3,4,6,8]
+                </code><br/>
+                <b>Find:</b> It returns first detected element in an array. <br/>
+                <code>
+                    var a = [1,2,3,4,5];<br/>
+                    &nbsp;var res = a.find(x=>2); // 3
+                </code>
+
+            </p>
+            <p>
+                In built methods to do operation on array:
+                <b>sort()</b><br/>
+                <code>
+                    var ch = ['a','z','c','e'];<br/>
+                    &nbsp;a.sort(); //['a','c','e','z'] <br/>
+                    var num = [13,2,4,6,5,12];<br/>
+                    a.sort((x,y)=>x-y); // [2,4,5,6,12,13]
+                </code><br/>
+                <b>toLocaleString()</b><br/>
+                Convert data object to string with regards to host environment current locale check by type of.
+                Lets say the end user current locale date time format.<br/>
+                <code>
+                    var d = new Date();<br/>
+                    var n = d.toLocaleString(); //string
+                </code> <br/>
+                <b>toString()</b><br/>
+                Convert object to string<br/>
+                <code>
+                        var num=213; <br/>
+                        num.toString(2); //Output:11010101 <br/>
+                        num.toString(8); //Output : 325 <br/>
+                        num.toString(16); //d5<br/>
+                        num.toString(); //213
+                </code><br/>
+                <b>constructor()</b><br/>
+                <p>It's a special method used to craete and initialise an object in a class. The defined object in constructor can be accessed accross class.
+                For child class as per ECMA script we have to call super() in constructor.
+                </p>
+                <code>
+                    class sample {<br/>
+                        &nbsp;constructor(){ <br/>
+                            &nbsp;&nbsp;this.a=3; <br/>
+                            &nbsp;&nbsp;this.b=5; <br/>
+                        &nbsp;}<br/>
+                        &nbsp;function abc(){<br/>
+                            &nbsp;&nbsp;return a; <br/>
+                        &nbsp;}<br/>
+
+                    }<br/>
+                </code>
+                <b>copyWithIn</b>
+                <p>
+                    array.copyWithin(target, start, end)<br/>
+
+                    Parameters:<br/>
+                    target : The index position to copy the elements to(Required).<br/>
+                    start : It is optional. The index position to<br/>
+                    start copying elements from  (default is 0).<br/>
+                    end : It is optional. The index position to <br/>
+                    stop copying elements from (default is array.length).<br/>
+                    Return value:<br/>
+                    It returns the modified array. </p>
+                    <code>
+                            var array = [ 1, 2, 3, 4, 5, 6, 7 ]; <br/>
+                            &nbsp;array.copyWithin(3); //output: [1, 2, 3, 1, 2, 3, 4]
+                    </code>
+                </p>
+                <b>Entries:</b>
+                <p>
+                    It results first element of an array.
+                </p>
+                <code>
+                    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    fruits.entries(); // 0, Banana
+                </code>
+          </div><!-- /.blog-post -->
+  
+           
+  
+          </div>
+        
+</div>
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+        <p>By Bhanupriya</p>
+        <p>
+          <a href="#">Back to top</a>
+        </p>
+      </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Blog Template for Bootstrap_files/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./Blog Template for Bootstrap_files/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="./Blog Template for Bootstrap_files/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./Blog Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="data.json"></script>
+    <script type="text/javascript"  src="jb.js"></script>
+    <script type="text/javascript"  src="sidebar.js"></script>
+
+</body></html>
