@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
 import Calculator from '../Calculator/Calculator';
+import Notice from '../Notice/Notice';
 
 describe('App', () => {
   let wrapper;
@@ -15,5 +16,9 @@ describe('App', () => {
 
   it('should render the Calculator Component', () => {
     expect(wrapper.containsMatchingElement(<Calculator />)).toEqual(true);
+  });
+
+  it('should render the Notice Component', () => {
+    expect(wrapper.containsMatchingElement(<Notice />)).toEqual(true);
   });
 });
