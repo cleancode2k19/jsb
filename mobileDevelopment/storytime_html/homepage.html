@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Story Time</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 padding-25">
+				<header class="header" role="banner">
+					<img src="images/logo-storytime-white.png" width="30%"/>
+					<nav id="nav" class="nav" role="navigation">
+					  
+					  <!-- ACTUAL NAVIGATION MENU -->
+					  <ul class="nav__menu" id="menu" tabindex="-1" aria-label="main navigation" hidden>
+						<li class="nav__item"><a href="#" class="nav__link">Select category</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Change PIN</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Logout</a></li>
+					  </ul>
+					  
+					  <!-- MENU TOGGLE BUTTON -->
+					  <a href="#nav" class="nav__toggle" role="button" aria-expanded="false" aria-controls="menu">
+						<svg class="menuicon" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 50 50">
+						  <title>Toggle Menu</title>
+						  <g>
+							<line class="menuicon__bar" x1="13" y1="16.5" x2="37" y2="16.5"/>
+							<line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5"/>
+							<line class="menuicon__bar" x1="13" y1="24.5" x2="37" y2="24.5"/>
+							<line class="menuicon__bar" x1="13" y1="32.5" x2="37" y2="32.5"/>
+							<circle class="menuicon__circle" r="23" cx="25" cy="25" />
+						  </g>
+						</svg>
+					  </a>
+					  
+					  <!-- ANIMATED BACKGROUND ELEMENT -->
+					  <div class="splash"></div>
+					  
+					</nav>
+					
+				  </header>
+
+
+				<header>
+				   <div class="centre"><span class="login100-form-title p-b-48">
+						<!-- <img src="images/logo-storytime.png" width="70%"/> -->
+					</span></div>
+				   
+				 </header>
+				<form class="login100-form validate-form">
+					<!-- partial:index.partial.html -->
+				<div class="audio-player">
+					<div id="play-btn"></div>
+					<div class="audio-wrapper" id="player-container" href="javascript:;">
+						<audio id="player" ontimeupdate="initProgressBar()">
+							<source src="http://www.lukeduncan.me/oslo.mp3" type="audio/mp3">
+						</audio>
+					</div>
+					<div class="player-controls scrubber">
+					<p>Oslo <small>by</small> Holy Esque</p>
+						<span id="seekObjContainer">
+							<progress id="seekObj" value="0" max="1"></progress>
+						</span>
+					<br>
+					<small style="float: left; position: relative; left: 15px;" class="start-time"></small>
+					<small style="float: right; position: relative; right: 20px;" class="end-time"></small>
+
+					</div>
+					<div class="album-image" style="background-image: url('https://artwork-cdn.7static.com/static/img/sleeveart/00/051/614/0005161476_350.jpg')"></div>
+				</div>
+<!-- partial -->
+<!-- partial:index.partial.html -->
+<div class="audio-player">
+	<div id="play-btn"></div>
+	<div class="audio-wrapper" id="player-container" href="javascript:;">
+		<audio id="player" ontimeupdate="initProgressBar()">
+			<source src="http://www.lukeduncan.me/oslo.mp3" type="audio/mp3">
+		</audio>
+	</div>
+	<div class="player-controls scrubber">
+	<p>Oslo <small>by</small> Holy Esque</p>
+		<span id="seekObjContainer">
+			<progress id="seekObj" value="0" max="1"></progress>
+		</span>
+	<br>
+	<small style="float: left; position: relative; left: 15px;" class="start-time"></small>
+	<small style="float: right; position: relative; right: 20px;" class="end-time"></small>
+
+	</div>
+	<div class="album-image" style="background-image: url('https://artwork-cdn.7static.com/static/img/sleeveart/00/051/614/0005161476_350.jpg')"></div>
+</div>
+<!-- partial -->
+
+				
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+					
+					
+
+					
+
+					
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<script  src="./script1.js"></script>
+
+</body>
+</html>
