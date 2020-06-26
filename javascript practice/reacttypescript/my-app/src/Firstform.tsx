@@ -4,6 +4,11 @@ function Firstform() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  
+  function handleClick() {
+    console.log('Button click ...'+firstName);
+  }
+  
   return (
     <form>
       <input
@@ -38,7 +43,7 @@ function Firstform() {
         name="password"
         required
       />
-      <button type="submit">Submit</button>
+      <button type="button" onClick={handleClick}>Submit</button>
       <div>{firstName}{lastName}{email}</div>
     </form>
   );
