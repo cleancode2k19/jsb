@@ -4,12 +4,23 @@ function Firstform() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [userData] = useState([{
+    "firstName":"",
+    "lastName":"",
+    "email":""}]);
   
-  function handleClick() {
-    console.log('Button click ...'+firstName);
+  const handleClick = () =>  {
+    userData.push({
+      "firstName":firstName,
+      "lastName":lastName,
+      "email":email});
+    if(userData[0].firstName==""){
+    userData.shift();
+   
+    }
   }
-  
   return (
+    <div>
     <form>
       <input
         value={firstName}
@@ -46,6 +57,19 @@ function Firstform() {
       <button type="button" onClick={handleClick}>Submit</button>
       <div>{firstName}{lastName}{email}</div>
     </form>
+
+<div>
+{userData[0].firstName!==''&& userData.map((user, index) => (
+  <div key={index}> 
+    <h3>{user.firstName}</h3>
+    <p>{user.lastName}</p>
+    <p>{user.email}</p>
+  </div>
+))}
+</div>
+
+
+    </div>
   );
 }
 export default Firstform;
