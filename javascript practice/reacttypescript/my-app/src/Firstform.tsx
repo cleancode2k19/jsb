@@ -58,7 +58,7 @@ function Firstform() {
       <div>{firstName}{lastName}{email}</div>
     </form>
 
-<div>
+<div>userData[0].firstName
 {userData[0].firstName!==''&& userData.map((user, index) => (
   <div key={index}> 
     <h3>{user.firstName}</h3>
